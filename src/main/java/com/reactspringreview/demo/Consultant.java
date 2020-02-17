@@ -10,12 +10,14 @@ public class Consultant {
     @Id
     @GeneratedValue
     private Long id;
-    private String name;
+    private String firstName;
+    private String lastName;
 
     public Consultant() {}
 
-    public Consultant(String name) {
-        this.name = name;
+    public Consultant(String firstName, String lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
     }
 
     public Long getId() {
@@ -26,19 +28,27 @@ public class Consultant {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     @Override
     public String toString() {
         return "Consultant{" +
                 "id=" + id +
-                ", name='" + name + '\'' +
+                ", name='" + firstName + ' ' + lastName + '\'' +
                 '}';
     }
 }
