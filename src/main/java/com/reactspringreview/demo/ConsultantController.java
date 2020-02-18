@@ -15,7 +15,7 @@ public class ConsultantController {
         this.repo = repo;
     }
 
-    @GetMapping("/all")
+    @GetMapping("/consultants")
     @CrossOrigin(origins = "http://localhost:3000")
     public Collection<Consultant> jsonAll() {
         return repo.findAll().stream()
